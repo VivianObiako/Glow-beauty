@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Recoleta';
+  src: local('Recoleta'), url(./fonts/Recoleta-RegularDEMO.otf) format('opentype');
+}
+
+* {
+ 	box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--theme-background-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.font-reco{
+  font-family: Recoleta, serif;
+}
+
+.logo-dot{
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+}
+
+:root{
+	--theme-background-color: #faf8f6;
+  --theme-color-white: #ffffff;
+	--theme-textColor-white: #f1f0f5;
+  --theme-color-black: #5d5a59; 
+  --theme-color-blue: #19173a;
+  --theme-color-red: #f5683c;
+	--hover-color: #11b0c8;
+	--cols: 12;
+  --gridSize: calc(100vw / var(--cols));
+}
+
+.grid{
+	grid-template-columns: repeat(var(--cols),var(--gridSize));
+    display: grid;
+}
+
+
