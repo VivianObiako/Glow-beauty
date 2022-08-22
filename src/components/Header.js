@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon, ShoppingBagIcon } from '@heroicons/react/outline'
+
+import { Disclosure } from '@headlessui/react'
+import { MenuIcon, XIcon, ShoppingBagIcon } from '@heroicons/react/outline'
 
 const navigation = [
   { name: 'Product', href: '#', current: false },
