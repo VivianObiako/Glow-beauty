@@ -1,6 +1,6 @@
 
 import { Disclosure } from '@headlessui/react'
-import { MenuIcon, XIcon, ShoppingBagIcon } from '@heroicons/react/outline'
+import { HiMenu, HiX, HiOutlineShoppingBag } from "react-icons/hi"
 
 const navigation = [
   { name: 'Product', href: '#', current: false },
@@ -25,9 +25,9 @@ const Header = () => {
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <XIcon className="block h-6 w-6 " aria-hidden="true" />
+                    <HiX className="block h-6 w-6 " aria-hidden="true" />
                   ) : (
-                    <MenuIcon className="block h-6 w-6" aria-hidden="true" />
+                    <HiMenu className="block h-6 w-6" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>
@@ -62,7 +62,7 @@ const Header = () => {
                     className="bg-orange p-2 relative rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white h-10 w-10"
                     >
                     <span className="sr-only">Shop</span>
-                    <ShoppingBagIcon className="h-5 w-5 text-text-white m-auto" aria-hidden="true" />
+                    <HiOutlineShoppingBag className="h-5 w-5 text-text-white m-auto" aria-hidden="true" />
                     <p className=' absolute text-text-white text-xs w-5 rounded-full bg-blue border top-[-4px] right-[-3px]'>1</p>
                     </button>
 

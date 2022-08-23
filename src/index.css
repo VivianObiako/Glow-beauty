@@ -36,6 +36,11 @@ code {
   border-radius: 50%;
 }
 
+.hero-image{
+  background-image: url(./images/hero-image4.png);
+  
+}
+
 :root{
 	--theme-background-color: #faf8f6;
   --theme-color-white: #ffffff;
