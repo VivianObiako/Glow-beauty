@@ -11,6 +11,8 @@ module.exports = {
       'white': 'fff',
       'text-white': '#f1f0f5',
       'orange': '#f5683c',
+      'mid-orange': '#f6866a',
+      'light-orange': '#ffe5de',
       'light-purple': '#f1e4ef',
     },
     extend: {
