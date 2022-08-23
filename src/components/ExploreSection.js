@@ -7,7 +7,7 @@ import Leaf from '../images/Leaf1.png'
 
 const ExploreSection = () => {
   return (
-    <section className=' xl:grid xl:grid-cols-9 relative'>
+    <section className='max-w-[1440px] mx-auto xl:grid xl:grid-cols-9 relative'>
         <img src={Leaf} alt='a leaf outline' className='w-[23rem] z-40 absolute top-[0] left-[-4rem] rotate-45'/>
         <div className='mr-[-10rem] z-10 xl:hidden'>
         </div>
