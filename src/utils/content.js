@@ -19,3 +19,33 @@ export const products = [
     { name: 'Sunrise Shampoo',},
     { name: 'Luxury Oil Gel', },
 ]
+
+export const linksList = [
+    {
+        title: 'Company', 
+        links: [
+            {name: 'About', href: '#'}, 
+            {name: 'Jobs', href: '#'},
+            {name: 'Branding', href: '#'},
+            {name: 'Newsroom', href: '#'}
+        ]
+    },
+    {
+        title: 'Resources', 
+        links: [
+            {name: 'College', href: '#'}, 
+            {name: 'Support', href: '#'},
+            {name: 'Safety', href: '#'},
+            {name: 'StreamKit', href: ''}
+        ]
+    },
+    {
+        title: 'Terms & Condition', 
+        links: [
+            {name: 'Policy', href: '#'}, 
+            {name: 'Faq', href: '#'},
+            {name: 'Return & Delivery', href: '#'},
+            {name: 'Tracking', href: '#'}
+        ]
+    },
+]

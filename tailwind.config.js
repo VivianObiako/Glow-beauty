@@ -7,8 +7,10 @@ module.exports = {
     colors: {
       'bg': '#faf8f6',
       'blue': '#19173a',
+      'mid-blue':'#282749',
+      'light-blue':'#7f7d9a',
       'light-black': '#6d6b69',
-      'white': 'fff',
+      'white': '#fff',
       'text-white': '#f1f0f5',
       'orange': '#f5683c',
       'mid-orange': '#f6866a',
@@ -22,5 +24,7 @@ module.exports = {
       // }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }

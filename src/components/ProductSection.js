@@ -32,8 +32,8 @@ const ProductSection = () => {
                 
           </button>
       </div>
-      {products.map((item) => (
-          <div key={item.name} className=''>
+      {products.map((item, i) => (
+          <div key={`${item.name}${i}`} className=''>
             <img src={item.image} alt={`${item.name}`}/>
             <p className='text-blue text-2xl font-reco mt-5'>{`${item.name}`}</p>
             <p className='text-light-black mt-2'>$190.99</p>
