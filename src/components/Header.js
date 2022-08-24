@@ -17,7 +17,7 @@ const Header = () => {
             <div className="relative flex items-center justify-between h-16 md:mt-7">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:mid-blue hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-mid-blue">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <HiX className="block h-6 w-6 " aria-hidden="true" />
@@ -56,9 +56,9 @@ const Header = () => {
                     type="button"
                     className="bg-orange p-2 relative rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white h-10 w-10"
                     >
-                    <span className="sr-only">Shop</span>
-                    <HiOutlineShoppingBag className="h-5 w-5 text-text-white m-auto" aria-hidden="true" />
-                    <p className=' absolute text-text-white text-xs w-5 rounded-full bg-blue border top-[-4px] right-[-3px]'>1</p>
+                      <span className="sr-only">Shop</span>
+                      <HiOutlineShoppingBag className="h-5 w-5 text-text-white m-auto" aria-hidden="true" />
+                      <p className=' absolute text-text-white text-xs w-5 rounded-full bg-blue border top-[-4px] right-[-3px]'>1</p>
                     </button>
 
                 </div>
