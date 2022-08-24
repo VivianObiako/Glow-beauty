@@ -1,5 +1,6 @@
 import './App.css';
 import ExploreSection from './components/ExploreSection';
+import FaqSection from './components/faqSection/FaqSection';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ProductSection from './components/ProductSection';
@@ -13,6 +14,7 @@ function App() {
       <ExploreSection />
       <ProductSection />
       <ReviewSection />
+      <FaqSection />
     </div>
   );
 }
