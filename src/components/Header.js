@@ -1,13 +1,8 @@
 
 import { Disclosure } from '@headlessui/react'
 import { HiMenu, HiX, HiOutlineShoppingBag } from "react-icons/hi"
+import { navigation } from '../utils/content'
 
-const navigation = [
-  { name: 'Product', href: '#', current: false },
-  { name: 'About', href: '#', current: false },
-  { name: 'Blog', href: '#', current: false },
-  { name: 'Reviews', href: '#', current: false },
-]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
