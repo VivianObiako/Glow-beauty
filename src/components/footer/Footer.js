@@ -17,10 +17,10 @@ const Footer = () => {
           </div>
           <p className='mt-8 text-sm font-medium capitalize leading-relaxed'>Keep Up With Our new releases,<br />Beauty tips and what emma's been<br /> up to.</p>
           <div className='social-logos flex justify-center gap-4 text-xl mt-10 xl:justify-start'>
-            <a href="#"><FaFacebookF /></a>
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaTwitter /></a>
-            <a href="#" className='text-text-white'><FaLinkedin /></a>
+            <a href="/#"><FaFacebookF /></a>
+            <a href="/#"><FaInstagram /></a>
+            <a href="/#"><FaTwitter /></a>
+            <a href="/#" className='text-text-white'><FaLinkedin /></a>
           </div>
         </div>
         {linksList.map((item)=>(
