@@ -56,9 +56,9 @@ const Header = () => {
                     type="button"
                     className="bg-orange p-2 relative rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white h-10 w-10"
                     >
-                    <span className="sr-only">Shop</span>
-                    <HiOutlineShoppingBag className="h-5 w-5 text-text-white m-auto" aria-hidden="true" />
-                    <p className=' absolute text-text-white text-xs w-5 rounded-full bg-blue border top-[-4px] right-[-3px]'>1</p>
+                      <span className="sr-only">Shop</span>
+                      <HiOutlineShoppingBag className="h-5 w-5 text-text-white m-auto" aria-hidden="true" />
+                      <p className=' absolute text-text-white text-xs w-5 rounded-full bg-blue border top-[-4px] right-[-3px]'>1</p>
                     </button>
 
                 </div>
