@@ -10,26 +10,36 @@ import LogoSection from './components/LogoSection';
 import ProductSection from './components/ProductSection';
 import ReviewSection from './components/ReviewSection';
 import StorySection from './components/StorySection';
+import {gsap} from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 function App() {
 
+  gsap.registerPlugin(ScrollTrigger)
+
   const [activeLanding, setActiveLanding] = useState(false)
+  const [tlOne, setTlOne] = useState();
 
   useEffect(()=>{
       setActiveLanding(true)
       setTimeout(() => {
         setActiveLanding(false);
-      }, 1000);
+      }, 6000);
   }, [])
 
+  useEffect(() => {
+    const tlOne = gsap.timeline();
+    setTlOne(tlOne);
+  }, []);
+
   return (
-    <div className="App">
+    <div className="App" id="smooth-wrapper">
       {activeLanding && <Landing />}
       {!activeLanding && 
-        <div>
-          <Header />
-          <Hero />
-          <ExploreSection />
+        <div className='main' id="smooth-content">
+          <Header timeline={tlOne} index={1}/>
+          <Hero timeline={tlOne} index={2}/>
+          <ExploreSection timeline={tlOne} index={1}/>
           <ProductSection />
           <ReviewSection />
           <FaqSection />

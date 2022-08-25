@@ -1,16 +1,27 @@
-
+import { useRef, useLayoutEffect} from 'react'
 import { Disclosure } from '@headlessui/react'
 import { HiMenu, HiX, HiOutlineShoppingBag } from "react-icons/hi"
 import { navigation } from '../utils/content'
+import {gsap} from 'gsap';
 
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-const Header = () => {
+const Header = ({ index}) => {
+  const el = useRef();
+  const q = gsap.utils.selector(el);
+  const logo = useRef()
+
+   useLayoutEffect(() => { 
+      const timeline = gsap.timeline({defaults:{duration: 1, ease: ""}});  
+      timeline.to(logo.current, {  y:0, x:0, duration: 2, },)
+      timeline.to(q('.nav-one'), {  y:0, }, '-=1.3') 
+      }, [q]);
+
   return (
-    <Disclosure as="nav" className="bg-bg">
+    <Disclosure as="nav" className="bg-bg nav-container" ref={el}>
       {({ open }) => (
         <>
           <div className="max-w-6xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -26,14 +37,14 @@ const Header = () => {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex-shrink-0 flex items-center">
+              <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start nav" >
+                <div className="flex-shrink-0 flex items-center logo-container translate-y-[-4rem] translate-x-[-6rem]" ref={logo}>
                     <h1 className='font-reco text-4xl text-blue'>Glow</h1>
                     <div className='logo-dot bg-orange ml-1 mt-3'></div>
                 </div>
                 
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 translate-y-[-3rem] nav-one">
                 <div className="hidden sm:block sm:ml-6 md:mr-9">
                     <div className="flex space-x-4">
                         {navigation.map((item) => (

@@ -1,8 +1,10 @@
+import React, { useRef, useLayoutEffect} from 'react'
 import Product1 from '../images/product1.png'
 import Product2 from '../images/product2.png'
 import Product3 from '../images/product3.png'
 import Product4 from '../images/product4.png'
 import Product5 from '../images/product5.png'
+import {gsap} from 'gsap';
 
 
 const products = [
@@ -14,14 +16,34 @@ const products = [
 ]
 
 const ProductSection = () => {
+
+  const el = useRef();
+  const q = gsap.utils.selector(el);
+
+  useLayoutEffect(() => {
+    const scrollTimeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: el.current,
+            pin: true,
+            start: "top top",
+            end: "bottom top",
+            scrub: true  
+        },
+    })
+
+    scrollTimeline.addLabel('start')
+        .fromTo(q('.text-anim'), {opacity: 0, y:-5,}, {opacity: 1, y:0, stagger: .1},)
+        .fromTo(q('.product'), {opacity: 0, x:60,}, {opacity: 1, x:0, }, '')
+})
+
   return (
-    <section className='max-w-6xl mx-auto flex flex-col lg:grid lg:grid-cols-3 gap-6 lg:gap-4 px-4 xl:px-0 py-[8rem]'>
+    <section className='max-w-6xl mx-auto flex flex-col lg:grid lg:grid-cols-3 gap-6 lg:gap-4 px-4 xl:px-0 py-[8rem]' ref={el}>
       <div className='lg:text-start'>
-        <h2 className='font-reco text-blue text-6xl tracking leading-snug'>Trending On <span className='text-orange'>Essentials</span></h2>
-        <p className='text-light-black mt-6'>Made with nature's best ingredients - our <br />products' transarent ingredient. Fear of<br /> God Essentials.</p>
+        <h2 className='font-reco text-blue text-6xl tracking leading-snug text-anim'>Trending On <span className='text-orange '>Essentials</span></h2>
+        <p className='text-light-black mt-6 text-anim'>Made with nature's best ingredients - our <br />products' transarent ingredient. Fear of<br /> God Essentials.</p>
         <button
                 type="button"
-                className=" mx-auto lg:mx-0 bg-transparent border border-orange px-7 py-4  mt-7 relative font-semibold rounded-full text-orange flex hover:bg-orange hover:text-text-white transition duration-500 delay-200 ease-in-out "
+                className=" mx-auto lg:mx-0 bg-transparent border border-orange px-7 py-4  mt-7 relative font-semibold rounded-full text-orange flex hover:bg-orange hover:text-text-white hover:transition hover:duration-500 hover:delay-200 hover:ease-in-out text-anim"
                 >
                 <span>Browse All Products </span>
                 <span className='ml-1'>
@@ -33,7 +55,7 @@ const ProductSection = () => {
           </button>
       </div>
       {products.map((item, i) => (
-          <div key={`${item.name}${i}`} className=''>
+          <div key={`${item.name}${i}`} className='product'>
             <img src={item.image} alt={`${item.name}`}/>
             <p className='text-blue text-2xl font-reco mt-5'>{`${item.name}`}</p>
             <p className='text-light-black mt-2'>$190.99</p>
