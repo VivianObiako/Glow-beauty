@@ -1,11 +1,26 @@
-import React from 'react'
+import React,{ useRef,useLayoutEffect} from 'react'
 import { IoPlaySharp } from "react-icons/io5";
 import heroTextImage from '../images/hero-text.png'
+import {gsap} from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const Hero = () => {
+const Hero = ({ index}) => {
+
+    gsap.registerPlugin(ScrollTrigger)
+    const el = useRef();
+    
+
+    useLayoutEffect(() => {   
+    const timeline = gsap.timeline({defaults:{duration: 1.3, ease: ""}});
+    timeline.to(el.current, {y:0}) 
+    }, []);
+
+    
+
+
   return (
-    <section className=' bg-no-repeat bg-center bg-auto hero-image max-w-6xl mx-auto pt-[3rem] md:pt-[7rem] md:pb-[9rem] px-2 sm:px-6 lg:px-8 '>
-        <h1 className='font-reco text-blue text-5xl md:text-[5rem] md:text-start tracking-wide'>
+    <section className=' bg-no-repeat bg-center bg-auto hero-image max-w-6xl mx-auto pt-[3rem] md:pt-[7rem] md:pb-[9rem] px-2 sm:px-6 lg:px-8 translate-y-[6rem]' ref={el}>
+        <h1 className='font-reco text-blue text-5xl md:text-[5rem] md:text-start tracking-wide main-text'>
             Let your skin<br/>
             Going <span ><img src={heroTextImage} alt='a girl with clear skin' className='inline'/></span> Out.
         </h1>

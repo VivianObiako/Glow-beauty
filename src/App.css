@@ -1,6 +1,15 @@
 .App {
   text-align: center;
   overflow: hidden;
+  
+}
+
+.main{
+  scroll-snap-type: y mandatory;
+}
+
+.main section{
+  scroll-snap-align: center;
 }
 
 .App-logo {
