@@ -18,7 +18,6 @@ function App() {
   gsap.registerPlugin(ScrollTrigger)
 
   const [activeLanding, setActiveLanding] = useState(false)
-  const [tlOne, setTlOne] = useState();
 
   useEffect(()=>{
       setActiveLanding(true)
@@ -27,19 +26,14 @@ function App() {
       }, 6000);
   }, [])
 
-  useEffect(() => {
-    const tlOne = gsap.timeline();
-    setTlOne(tlOne);
-  }, []);
-
   return (
     <div className="App" id="smooth-wrapper">
       {activeLanding && <Landing />}
       {!activeLanding && 
         <div className='main' id="smooth-content">
-          <Header timeline={tlOne} index={1}/>
-          <Hero timeline={tlOne} index={2}/>
-          <ExploreSection timeline={tlOne} index={1}/>
+          <Header />
+          <Hero />
+          <ExploreSection />
           <ProductSection />
           <ReviewSection />
           <FaqSection />

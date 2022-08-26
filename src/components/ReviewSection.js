@@ -21,6 +21,8 @@ const ReviewSection = () => {
     scrollTimeline.addLabel('start')
         .fromTo(q('.rev-img'), {scale: 0.2, opacity: 0,},{scale:1, opacity: 1},)
         .fromTo(q('.text-anim'), {opacity: 0, y:100,}, {opacity: 1, y:0 }, '')
+        
+    scrollTimeline.progress(1).progress(0)
 })
 
 
