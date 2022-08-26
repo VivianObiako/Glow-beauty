@@ -34,6 +34,8 @@ const ProductSection = () => {
     scrollTimeline.addLabel('start')
         .fromTo(q('.text-anim'), {opacity: 0, y:-5,}, {opacity: 1, y:0, stagger: .1},)
         .fromTo(q('.product'), {opacity: 0, x:60,}, {opacity: 1, x:0, }, '')
+
+    scrollTimeline.progress(1).progress(0)
 })
 
   return (

@@ -24,6 +24,8 @@ const LogoSection = () => {
 
     scrollTimeline.addLabel('start')
         .fromTo(q('.logo-anim'), {opacity: 0, x:60,}, {opacity: 1, x:0, stagger:.2 }, '')
+
+    scrollTimeline.progress(1).progress(0)
 }) 
 
 

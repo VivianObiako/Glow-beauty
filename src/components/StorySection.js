@@ -20,6 +20,8 @@ const StorySection = () => {
 
     scrollTimeline.addLabel('start')
         .fromTo(el.current, {opacity: 0, x:100,}, {opacity: 1, x:0,},)
+    
+    scrollTimeline.progress(1).progress(0)
         
 })
 
