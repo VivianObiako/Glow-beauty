@@ -21,6 +21,7 @@ const ExploreSection = ({ index}) => {
       }, [index,q]);
 
     useLayoutEffect(() => {
+        
         const scrollTimeline = gsap.timeline({
             scrollTrigger: {
                 trigger: el.current,
@@ -34,6 +35,8 @@ const ExploreSection = ({ index}) => {
             .to(q('.img-ex'), {width: '100%',duration: 1})
             .to(q('.exp-tag'), {width: '8.7rem',},'')
             .to(q('.text-anim'), {opacity: 1, y:0, stagger:.4}, '-=1')
+
+        scrollTimeline.progress(1).progress(0)
     })
 
 

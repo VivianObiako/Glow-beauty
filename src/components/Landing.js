@@ -14,6 +14,8 @@ const Landing = () => {
         tl.to(dot.current, {right: 0, scale: 1 })
         tl.to(logoText.current,{ opacity: 1,  })
         tl.to(logo.current, { bottom: '60%', right: '60%', scale:.5, opacity:0, duration: 2.5, ease: ''})
+
+        tl.progress(1).progress(0)
     }, [])
   return (
     <div className='bg-light-purple flex items-center justify-center w-full h-[100vh] m-0'>
