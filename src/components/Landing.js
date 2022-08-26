@@ -13,7 +13,7 @@ const Landing = () => {
         tl.fromTo(dot.current, {right: '100%', scale: 4, scaleX:7,}, {right:0, scale: 4, ease: 'Bounce.easeOut'})
         tl.to(dot.current, {right: 0, scale: 1 })
         tl.to(logoText.current,{ opacity: 1,  })
-        tl.to(logo.current, { bottom: '60%', right: '60%', scale:.5, opacity:0, duration: 2.5, ease: ''})
+        tl.to(logo.current, { bottom: '60%', right: '60%', scale:.5, opacity:0, duration: 2, ease: ''})
 
         tl.progress(1).progress(0)
     }, [])
