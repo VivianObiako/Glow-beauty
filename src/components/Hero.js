@@ -13,6 +13,7 @@ const Hero = ({ index}) => {
     useLayoutEffect(() => {   
     const timeline = gsap.timeline({defaults:{duration: 1.3, ease: ""}});
     timeline.to(el.current, {y:0}) 
+    timeline.progress(1).progress(0)
     }, []);
 
     

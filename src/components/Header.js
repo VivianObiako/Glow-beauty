@@ -18,6 +18,7 @@ const Header = ({ index}) => {
       const timeline = gsap.timeline({defaults:{duration: 1, ease: ""}});  
       timeline.to(logo.current, {  y:0, x:0, duration: 2, },)
       timeline.to(q('.nav-one'), {  y:0, }, '-=1.3') 
+      timeline.progress(1).progress(0)
       }, [q]);
 
   return (
